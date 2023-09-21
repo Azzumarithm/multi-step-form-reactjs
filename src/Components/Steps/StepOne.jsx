@@ -5,7 +5,7 @@ import "../../App.css";
 const StepOne = ({ stepsData, setStepsData, stepsCount, setStepsCount, isStepOneDisabled, setIsStepOneDisabled, setIsStepTwoDisabled}) => {  
     //Including Empty String
     const isValidName = (name) => /^(?:[A-Za-z]+(?:[ -][A-Za-z]+)*)?$/.test(name);
-    const isValidEmail = (email) => /^(?:[^\s@]+@[^\s@]+\.[^\s@]+)?$/.test(email);
+    const isValidEmail = (email) => /^(?:[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,})?$/.test(email);
     const isValidPhoneNumber = (phoneNumber) => /^(?:(?:\+\d{1,3}\s?)?(?:\()?\d{1,4}(?:\))?[-\s]?\d{1,4}[-\s]?\d{1,9})?$/.test(phoneNumber);
     
     const [stepOneOutlineErrors, setStepOneOutlineErrors] = useState({
@@ -90,7 +90,7 @@ const StepOne = ({ stepsData, setStepsData, stepsCount, setStepsCount, isStepOne
 
         //Excluding empty string
         const isValidName = (name) => /^[A-Za-z]+(?:[ -][A-Za-z]+)*$/.test(name);
-        const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        const isValidEmail = (email) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
         const isValidPhoneNumber = (phoneNumber) => /^(\+\d{1,3}\s?)?(\()?\d{1,4}(\))?[-\s]?\d{1,4}[-\s]?\d{1,9}$/.test(phoneNumber);
 
         const personalNameValue = personalNameName?.value;
